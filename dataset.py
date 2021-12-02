@@ -1,4 +1,4 @@
-## to convert video --> images (frames)
+## to convert single video --> images (frames)
 from torch import nn, einsum
 import torch
 import torchvision
@@ -18,7 +18,6 @@ import pandas as pd
 
 #timesformer classes 
 from timesformer import TimeSformer,Attention,FeedForward,PreNorm
-
 
 
 var = pd.read_csv(r"C:\Users\samal\Desktop\p1-5\p1\v1\source1\gt_HR.csv")
@@ -86,3 +85,6 @@ videos.append(frames)
 video = torch.tensor(np.asarray(videos)).float() # (batch x frames x channels x height x width)
 
 print(video.shape)
+
+
+
